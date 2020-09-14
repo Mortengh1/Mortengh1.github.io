@@ -21,7 +21,7 @@ document.getElementById('myVideo').play();
 function scrollAppear() {
     var introText = document.querySelector('.intro-text');
     var introPosition = introText.getBoundingClientRect().top;
-    var screenPoisition = window.innerHeight / 1.2;
+    var screenPoisition = window.innerHeight / 2;
     // hvis introPosition er mindre end vores screenPosition skal den bruge introText, hvor der koblet en classList på som giver os adgang til klassen ovenpå introText. .add hvor vi sætter intro-appear ind fra css delen
     if (introPosition < screenPoisition) {
         introText.classList.add('intro-appear');
