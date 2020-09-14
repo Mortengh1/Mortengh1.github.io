@@ -14,7 +14,7 @@ $(document).ready(function () { // kører så snart DOM er klar
     // Får videoen til at afspille af sig selv
 document.getElementById('myVideo').play();
        
-    
+
     // En funktion når som bliver vist når man scroller ned via intro-text
 // vi laver en variabel introPosition, hvor vi gerne vil have en afstand fra hvor teksten er til vinduet.
 // vi laver en funktion ScreenPosition med innerHeight for at den opløses ens på forskellige enheder.
@@ -30,6 +30,8 @@ function scrollAppear() {
 
 
 window.addEventListener('scroll', scrollAppear);
+    
+    
     
     
     //Billede karusel

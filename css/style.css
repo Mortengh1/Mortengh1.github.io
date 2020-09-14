@@ -11,7 +11,7 @@
 
 html,
 body {
-    overflow: hidden;
+
 }
 
 
@@ -32,39 +32,35 @@ body {
 
 /* Får siden til at snappe til articles */
 main {
-    overflow: scroll;
+
     height: 100vh;
-    scroll-snap-type: mandatory;
-    scroll-snap-type: y mandatory;
-    scroll-snap-points-y: repeat(100%);
+
 }
 
 article {
-    margin: 2%;
-    height: 100vh;
-    scroll-snap-align: start;
-    position: relative;
-}
+    margin: 2% 0;
+ height: 100vh;
+} 
 
 section {
     margin: auto;
-    width: 70%;
-    padding: 13% 0;
+    width: 100%;
+    padding: 7% 0;
 }
 
 /* Den skal være gennemsigtig og skubbe y-aksen fra klassen 20px ned med 0.5s */
 .intro-text {
     width: 80%;
-    opacity: 1;
+    opacity: 0;
     transform: translateY(20px);
     transition: 0.5s all ease-in-out;
 }
 
-/* opacity bliver sat til 1 for at man kan se den. */
 .intro-appear {
     opacity: 1;
     transform: translateY(0px);
 }
+
 
 
 /* Får tekst og billede til at være ved siden af hinanden */
@@ -72,7 +68,7 @@ section {
     display: grid;
     grid-template-columns: no-repeat(2, 1fr);
     background-color: crimson;
-    padding: 1% 5%;
+    padding: 7% 5%;
 }
 
 .intro-content img{
@@ -84,6 +80,10 @@ section {
     grid-column: 2;
 }
 
+
+
+
+/*Slideshow */ 
 .slideshow{
     padding: 0;
 }
