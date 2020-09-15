@@ -7,33 +7,50 @@ console.log('file: js/js.js loaded');
 // A $( document ).ready() block.
 $(document).ready(function () { // kører så snart DOM er klar
 
-	console.log("jQuery 3.5.1 running. Alert level green.");
+    console.log("jQuery 3.5.1 running. Alert level green.");
 
-	// ... min kode herfra ...
-    
+    // ... min kode herfra ...
+
     // Får videoen til at afspille af sig selv
-document.getElementById('myVideo').play();
-       
-
-    // En funktion når som bliver vist når man scroller ned via intro-text
-// vi laver en variabel introPosition, hvor vi gerne vil have en afstand fra hvor teksten er til vinduet.
-// vi laver en funktion ScreenPosition med innerHeight for at den opløses ens på forskellige enheder.
-function scrollAppear() {
-    var introText = document.querySelector('.intro-text');
-    var introPosition = introText.getBoundingClientRect().top;
-    var screenPoisition = window.innerHeight / 2;
-    // hvis introPosition er mindre end vores screenPosition skal den bruge introText, hvor der koblet en classList på som giver os adgang til klassen ovenpå introText. .add hvor vi sætter intro-appear ind fra css delen
-    if (introPosition < screenPoisition) {
-        introText.classList.add('intro-appear');
-    }
-}
+    document.getElementById('myVideo').play();
 
 
-window.addEventListener('scroll', scrollAppear);
-    
-    
-    
-    
+   
+/* Denne function får texten til at fade ind når man scroller ned til 500px og 1200px */
+    var $intro = $('#intro-text');
+
+    $(window).on('scroll', function () {
+
+        if ($(this).scrollTop() > 500) {
+
+            $intro.addClass('active');
+
+        } else {
+
+            $intro.removeClass('active');
+
+        }
+
+    });
+
+  var $intro2 = $('#intro-text2');
+
+    $(window).on('scroll', function () {
+
+        if ($(this).scrollTop() > 1200) {
+
+            $intro2.addClass('active');
+
+        } else {
+
+            $intro2.removeClass('active');
+
+        }
+
+    });
+
+
+
     //Billede karusel
     var slideIndex = 0;
     showSlides();
@@ -56,6 +73,6 @@ window.addEventListener('scroll', scrollAppear);
         dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 5000); // skifter billede hver femte sekund
     }
-	// ... min kode slut ...
+    // ... min kode slut ...
 
 }); // denne line må ikke slettes
