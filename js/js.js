@@ -15,8 +15,8 @@ $(document).ready(function () { // kører så snart DOM er klar
     document.getElementById('myVideo').play();
 
 
-   
-/* Denne function får texten til at fade ind når man scroller ned til 500px og 1200px */
+
+    /* Denne function får intro-text til at fade ind når man scroller ned til 500px */
     var $intro = $('#intro-text');
 
     $(window).on('scroll', function () {
@@ -33,7 +33,8 @@ $(document).ready(function () { // kører så snart DOM er klar
 
     });
 
-  var $intro2 = $('#intro-text2');
+    /* Denne function får intro-text2 til at fade ind når man scroller ned til 1200px */
+    var $intro2 = $('#intro-text2');
 
     $(window).on('scroll', function () {
 
