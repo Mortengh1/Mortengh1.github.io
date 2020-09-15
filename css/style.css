@@ -16,6 +16,7 @@ body {
 
 
 body {
+    background-color: crimson;
     padding: 0;
     margin: 0;
 }
@@ -50,6 +51,7 @@ section {
 
 /* Den skal være gennemsigtig og skubbe y-aksen fra klassen 20px ned med 0.5s */
 .intro-text {
+    margin: auto;
     width: 80%;
     opacity: 0;
     transform: translateY(150px);
@@ -62,18 +64,18 @@ section {
 }
 
 
-
 /* Får tekst og billede til at være ved siden af hinanden */
 .intro-content {
     display: grid;
     grid-template-columns: no-repeat(2, 1fr);
-    background-color: crimson;
-    padding: 7% 5%;
+    background-color: white;
+    padding: 4% 5%;
 }
 
 .intro-content img{
-    width: 500px;
-    border-radius: 2%;
+    width: 400px;
+    border-radius: 50%;
+    border: 5px solid crimson;
 }
 
 .intro-billede {
