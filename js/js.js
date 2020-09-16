@@ -33,12 +33,33 @@ $(document).ready(function () { // kører så snart DOM er klar
 
     });
 
-    /* Denne function får intro-text2 til at fade ind når man scroller ned til 1200px */
-    var $intro2 = $('#intro-text2');
+     /* Denne function får intro-text2 til at fade ind når man scroller ned til 1900px */
+    var $fakta = $('.fakta-style');
 
     $(window).on('scroll', function () {
 
         if ($(this).scrollTop() > 1200) {
+
+            $fakta.addClass('active');
+
+        } else {
+
+            $fakta.removeClass('active');
+
+        }
+
+    });
+    
+    
+    
+    
+    
+    /* Denne function får intro-text2 til at fade ind når man scroller ned til 1900px */
+    var $intro2 = $('#intro-text2');
+
+    $(window).on('scroll', function () {
+
+        if ($(this).scrollTop() > 1900) {
 
             $intro2.addClass('active');
 
